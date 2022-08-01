@@ -1,0 +1,48 @@
+// a simple C++ program
+
+#include <iostream>
+
+int main ()
+{
+std::cout << "Hello, World!" << std::endl;
+return 0;
+}
+
+// Notes
+
+// a small C++ program (compiler ignores comments, purpose is to explain program to human reader)
+
+#include <iostream> //include directives used to ask for specific standard libary parts that you wish to use.
+// such directives usually appear at the beginning of the program.
+// the only part of the standard libary that our program will use is the input-output
+// We request this input-output libary by writing #include <iostream>
+// The name iostream suggests support for sequential, or stream, input-output, rather than random-access or graphical input-output. 
+// Because the name iostream appears in an #include directive and it is enclosed in angle brackets (< and >), it refers to a part of the C++ library called a standard header.
+
+int main() 
+// A function is a piece of program that has a name, and that another part of the program can call, or cause to run.
+// Every C++ program must contain a function named main.
+// When we ask the C++ implementation to run a program, it does so by calling this function.
+// we begin by writing int main() to say that we are defining a function named main that returns a value of type int.
+// Here, int is the name that the core language uses to describe integers.
+
+{ // left (curly) brace. Left brace marks the begining of our statement in our main function. The braces indicate that all the statements between them are part of the same function.
+    // When there are two or more statements within braces, as there are in this function, the implementation executes them in the order in which they appear.
+    
+    std::cout << "Hello, World!" << std::endl; // statements go between the braces. 
+    return 0;
+
+// The first statement inside the braces does our program's real work: std::cout << "Hello, world!" << std::endl;
+// This statement uses the standard library's output operator, <<, to write Hello, world! on the standard output, and then to write the value of std::endl.
+// Preceding a name by std:: indicates that the name is part of a namespace named std.
+// A namespace is a collection of related names; the standard library uses std to contain all the names that it defines
+// E.g the iostream standard header defines the names cout and endl, and we refer to these names as std::cout and std::endl.
+// The name std::cout refers to the standard output stream, which is whatever facility the C++ implementation uses for ordinary output from programs.
+// In a typical C++ implementation under a windowing operating system, std::cout will denote the window that the implementation associates with the program while it is running. Under such a system, the output written to std::cout will appear in the associated window.
+// Writing the value of std::endl ends the current line of output, so that if this program were to produce any more output, that output would appear on a new line.
+// A return statement, such as return 0; ends execution of the function in which it appears, and passes the value that appears between the return and the semicolon (0 in this example) back to the program that called the function that is returning.
+// The value that is returned must have a type that is appropriate for the type that the function says it will return.
+// In the case of main, the return type is int and the program to which main returns is the C++ implementation itself.
+// Therefore, a return from main must include an integer-valued expression, which is passed back to the implementation.
+
+} // right (curly) brace. Right brace marks the end of our statement in our main function. 
